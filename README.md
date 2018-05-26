@@ -37,4 +37,9 @@ You can change your input data file from data.csv to data1.csv for a change.
 
 The data1.csv file has been created from the [Desmos](https://www.desmos.com/) linear regression example [here](https://www.desmos.com/calculator/jwquvmikhr). 
 
-See if you can train the model with the right learning rate and iterations so as to match the values desmos shows!
+The MSE for desmos can be seen as:
+
+![MSE](https://raw.githubusercontent.com/rocka0/Gradient_Descent/master/Desmos.PNG)
+
+It's around **0.88**. See if you can train the model with the right learning rate and iterations so as to match the values desmos shows!
+
