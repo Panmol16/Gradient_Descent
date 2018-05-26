@@ -2,10 +2,10 @@ import pandas
 import matplotlib.pyplot as plt
 import numpy as np
 
-df = pandas.read_csv("data1.csv")
+df = pandas.read_csv("data.csv")
 
 x_df = df["x"].sample(frac=1) # Shuffle the rows before linear regression
-y_df = df["y"].sample(frac=1) / 10000 # Shuffle the rows before linear regression
+y_df = df["y"].sample(frac=1) # Shuffle the rows before linear regression
 
 #This graphs out all our data as a scatter plot
 plt.scatter(x_df, y_df)
