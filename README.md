@@ -11,21 +11,21 @@ A program that solves a simple linear regression problem with the gradient desce
 
 Well gradient descent is an optimization algorithm that uses the negative derivative of a function to find it's local minimum. More on gradient descent [here](https://en.wikipedia.org/wiki/Gradient_descent).
 
-# How does it work?
+# Why use Gradient Descent?
 
-Well we are using Gradient Descent to minimise the value of our cost function which tells us how efficient our model for predicting the data is. In this program, I am use the MSE - [Mean Squared Error](https://en.wikipedia.org/wiki/Mean_squared_error) as my cost function. The MSE is defined as:
+Well we are using Gradient Descent to minimise the value of our cost function which tells us how efficient our model for predicting the data is. In this program, I am using the MSE - [Mean Squared Error](https://en.wikipedia.org/wiki/Mean_squared_error) as my cost function. The MSE is defined as:
 
 ![MSE](https://i.stack.imgur.com/19Cmk.gif)
 
 # Minimizing the MSE
 
-To minimize the MSE, we take it's partial derivative with respect to the input parameters. Since we are in linear regression, we only have two things to worry about - **Slope** and the **Intercept**
+To minimize the MSE using Gradient Descent, we need to take it's partial derivative with respect to the input parameters. Since we are in simple linear regression, we only have two things to worry about - **Slope** and the **Intercept**
 
 The derivative are:
 
 ![Derivatives](https://spin.atomicobject.com/wp-content/uploads/linear_regression_gradient1.png)
 
-Where m is the slope and b is your intercept.
+Where ** m ** is the slope and ** b ** is your intercept.
 
 # Running the code
 
