@@ -25,7 +25,7 @@ The derivative are:
 
 ![Derivatives](https://spin.atomicobject.com/wp-content/uploads/linear_regression_gradient1.png)
 
-Where ** m ** is the slope and ** b ** is your intercept.
+Where **m** is the slope and **b** is your intercept.
 
 # Running the code
 
