@@ -2,10 +2,10 @@ import pandas
 import matplotlib.pyplot as plt
 import numpy as np
 
-df = pandas.read_csv("data.csv")
+df = pandas.read_csv("data1.csv")
 
 x_df = df["x"].sample(frac=1) # Shuffle the rows before linear regression
-y_df = df["y"].sample(frac=1) # Shuffle the rows before linear regression
+y_df = df["y"].sample(frac=1) / 10000 # Shuffle the rows before linear regression
 
 #This graphs out all our data as a scatter plot
 plt.scatter(x_df, y_df)
@@ -50,7 +50,7 @@ def gradient_descent(slope, intercept, x_values, y_values, learning_rate, iterat
 graph_line(0,0,range(int(x_df.min()) - 1, int(x_df.max()) + 1))
 
 #This calls our gradient descent function, running for 100 iterations
-final_slope, final_intercept = gradient_descent(0, 0, x_df, y_df, 0.0001, 100)
+final_slope, final_intercept = gradient_descent(0, 0, x_df, y_df, 0.0001, 200)
 
 #This graphs our final line of best fit found out by the gradient descent
 graph_line(final_slope, final_intercept , range(int(x_df.min()) - 1, int(x_df.max()) + 1))
