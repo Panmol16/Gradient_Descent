@@ -4,8 +4,8 @@ import numpy as np
 
 df = pandas.read_csv("data.csv")
 
-x_df = df["x"]
-y_df = df["y"]
+x_df = df["x"].sample(frac=1) # Shuffle the rows before linear regression
+y_df = df["y"].sample(frac=1) # Shuffle the rows before linear regression
 
 #This graphs out all our data as a scatter plot
 plt.scatter(x_df, y_df)
@@ -40,18 +40,17 @@ def gradient_step(slope, intercept, x_values, y_values, learning_rate):
 def gradient_descent(slope, intercept, x_values, y_values, learning_rate, iterations):
     starting_slope = slope
     starting_intercept = intercept
-    for i in range(iterations):
+    for i in range(1, iterations+1):
         starting_slope, starting_intercept = gradient_step(starting_slope, starting_intercept, x_df, y_df, learning_rate)
-        if i % 10 == 0:
+        if i % 10 == 0 or i == 1 or i == 2:
             print ("After %s iterations\nSlope: %s\nIntercept:%s\nMSE: %s\n" %(i, starting_slope, starting_intercept, meanSquaredError(starting_slope, starting_intercept, x_df, y_df) ))
-    
     return [starting_slope, starting_intercept]
 
 # This is the graph of the line y = mx + b where m and b = 0, our first guess
 graph_line(0,0,range(int(x_df.min()) - 1, int(x_df.max()) + 1))
 
-#This calls our gradient descent function
-final_slope, final_intercept = gradient_descent(0, 0, x_df, y_df, 0.0001, 101)
+#This calls our gradient descent function, running for 100 iterations
+final_slope, final_intercept = gradient_descent(0, 0, x_df, y_df, 0.0001, 100)
 
 #This graphs all our final line of best fit found out by the gradient descent
 graph_line(final_slope, final_intercept , range(int(x_df.min()) - 1, int(x_df.max()) + 1))
