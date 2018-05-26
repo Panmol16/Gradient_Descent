@@ -53,7 +53,7 @@ graph_line(0,0,range(int(x_df.min()) - 1, int(x_df.max()) + 1))
 #This calls our gradient descent function
 final_slope, final_intercept = gradient_descent(0, 0, x_df, y_df, 0.0001, 101)
 
-#This graphs all our final line of best fit found out by the gradient descent
+#This graphs our final line of best fit found out by the gradient descent
 graph_line(final_slope, final_intercept , range(int(x_df.min()) - 1, int(x_df.max()) + 1))
 
 #This shows us the mean sqaured error of our best fit line
