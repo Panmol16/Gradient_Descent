@@ -31,6 +31,10 @@ Where m is the slope and b is your intercept.
 
 To run the code, all you really need to do is type `python linear_regression.py` and it should work if you have installed all the dependencies.
 
-You can change your input data file from data.csv to data1.csv for a change. 
+You can change your input data file from data.csv to data1.csv for a change.
 
-Try tweaking about with the number of iterations and learning rate for different outputs!
+# Data1.csv
+
+The data1.csv file has been created from the [Desmos](https://www.desmos.com/) linear regression example [here](https://www.desmos.com/calculator/jwquvmikhr). 
+
+See if you can train the model with the right learning rate and iterations so as to match the values desmos shows!
