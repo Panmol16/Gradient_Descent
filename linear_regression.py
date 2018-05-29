@@ -49,7 +49,7 @@ def gradient_descent(slope, intercept, x_values, y_values, learning_rate, iterat
 # This is the graph of the line y = mx + b where m and b = 0, our first guess
 graph_line(0,0,range(int(x_df.min()) - 1, int(x_df.max()) + 1))
 
-#This calls our gradient descent function, running for 100 iterations
+#This calls our gradient descent function, running for 10000 iterations with a learning rahe of 0.002
 final_slope, final_intercept = gradient_descent(0, 0, x_df, y_df, 0.002, 10000)
 
 #This graphs our final line of best fit found out by the gradient descent
